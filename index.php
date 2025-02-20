@@ -7,6 +7,7 @@ session_start(); // Start the session
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="includes/index.css">
     <title>Document</title>
     <script>
         function appendToExpression(value) {
@@ -16,7 +17,7 @@ session_start(); // Start the session
 </head>
 <body>
     <form action="includes/formhandler.php" method="POST">
-        <input type="text" name="expression" placeholder="Enter expression" required>
+        <input type="text" name="expression" placeholder="Enter expression" readonly required class= "input-field">
         <br>
         <button type="button" onclick="appendToExpression('1')">1</button>
         <button type="button" onclick="appendToExpression('2')">2</button>
