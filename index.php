@@ -8,27 +8,33 @@ session_start(); // Start the session
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function appendToExpression(value) {
+            document.getElementsByName('expression')[0].value += value;
+        }
+    </script>
 </head>
 <body>
     <form action="includes/formhandler.php" method="POST">
         <input type="text" name="expression" placeholder="Enter expression" required>
         <br>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>0</button>
+        <button type="button" onclick="appendToExpression('1')">1</button>
+        <button type="button" onclick="appendToExpression('2')">2</button>
+        <button type="button" onclick="appendToExpression('3')">3</button>
+        <button type="button" onclick="appendToExpression('4')">4</button>
+        <button type="button" onclick="appendToExpression('5')">5</button>
+        <button type="button" onclick="appendToExpression('6')">6</button>
+        <button type="button" onclick="appendToExpression('7')">7</button>
+        <button type="button" onclick="appendToExpression('8')">8</button>
+        <button type="button" onclick="appendToExpression('9')">9</button>
+        <button type="button" onclick="appendToExpression('0')">0</button>
         <br>
-        <button>*</button>
-        <button>/</button>
-        <button>+</button>
-        <button>(</button>
-        <button>)</button>
+        <button type="button" onclick="appendToExpression('*')">*</button>
+        <button type="button" onclick="appendToExpression('/')">/</button>
+        <button type="button" onclick="appendToExpression('+')">+</button>
+        <button type="button" onclick="appendToExpression('-')">-</button>
+        <button type="button" onclick="appendToExpression('(')">(</button>
+        <button type="button" onclick="appendToExpression(')')">)</button>
         <br>
         <button type="submit">Calculate</button>
     </form>
