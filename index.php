@@ -1,3 +1,7 @@
+<?php
+session_start(); // Start the session
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +10,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
-        <input type="text" name="name" placeholder="Enter your name">
+    <form action="includes/formhandler.php" method="POST">
+        <input type="text" name="expression" placeholder="Enter expression" required>
+        <button type="submit">Calculate</button>
     </form>
+
+    <?php
+    if (isset($_SESSION['result'])) {
+        echo "<p>Result: " . $_SESSION['result'] . "</p>";
+        unset($_SESSION['result']); // Clear the result from the session
+    }
+    ?>
 </body>
 </html>
