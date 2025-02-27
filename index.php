@@ -36,6 +36,7 @@ session_start(); // Start the session
         <button type="button" onclick="appendToExpression('-')">-</button>
         <button type="button" onclick="appendToExpression('(')">(</button>
         <button type="button" onclick="appendToExpression(')')">)</button>
+        <button type="button" onclick="appendToExpression('%')">%</button>
         <br>
         <button type="submit">Calculate</button>
     </form>

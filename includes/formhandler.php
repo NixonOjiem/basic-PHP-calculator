@@ -23,3 +23,12 @@ $_SESSION['result'] = $result; // Store the result in the session
 // Redirect back to the index page
 header("Location: ../index.php");
 exit();
+
+// extra 
+echo "<h1>build it functions<h2>";
+
+        $nameVariable = "myFirst Name";
+
+        echo strlen($nameVariable) . "is how long the string is";// calculate the length of the string
+        echo strpos($nameVariable, "Va");
+        
